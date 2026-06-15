@@ -13,9 +13,9 @@ if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; re
 var URLParts		= document.location.href.split('/');
 var URLHost			= URLParts[2];
 
-var IS_PRD			= (URLHost.toLowerCase() == "localhost" || URLHost.toLowerCase() == "localhost" || URLHost.toLowerCase() == "localhost" || URLHost.toLowerCase() == "localhost")?true:false;
-var IS_STG			= (URLHost.toLowerCase() == "localhost" || URLHost.toLowerCase() == "localhost" || URLHost.toLowerCase() == "localhost")?true:false;
-var IS_DEV			= (URLHost.toLowerCase() == "localhost" || URLHost.toLowerCase() == "localhost" || URLHost.toLowerCase() == "localhost" || URLHost.toLowerCase() == "localhost")?true:false;
+var IS_PRD			= (URLHost.toLowerCase() == "vw.happymeal.com" || URLHost.toLowerCase() == "www.mcworld.com" || URLHost.toLowerCase() == "mcworld.com" || URLHost.toLowerCase() == "mcworld.happymeal.com")?true:false;
+var IS_STG			= (URLHost.toLowerCase() == "vw.staging.happymeal.com" || URLHost.toLowerCase() == "www.staging.mcworld.com" || URLHost.toLowerCase() == "mcworld.staging.happymeal.com")?true:false;
+var IS_DEV			= (URLHost.toLowerCase() == "vw.development.happymeal.com" || URLHost.toLowerCase() == "www.development.mcworld.com" || URLHost.toLowerCase() == "development.mcworld.com" || URLHost.toLowerCase() == "mcworld.development.happymeal.com")?true:false;
 var IS_LOCAL = (URLHost.toLowerCase() == "localhost") || (URLHost.toLowerCase() == "127.0.0.1") ?true:false;
 var IS_CREATA		= (URLHost.toLowerCase() == "dev.creatainteractive.com" || URLHost.toLowerCase() == "203.166.46.116"|| URLHost.toLowerCase() == "192.168.1.52")?true:false;
 

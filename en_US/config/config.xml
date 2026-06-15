@@ -28,12 +28,12 @@
 	<!-- SmartFox settings -->
 	<port>9339</port>
 		<zones environment='PRD'> 
-                <zone name="happy" id="HM3" port="9339">127.0.0.1</zone> 
-                <zone name="funny" id="HM3RED" port="9339">127.0.0.1</zone> 
-                <zone name="strong" id="HM3BLUE" port="9339">127.0.0.1</zone> 
-                <zone name="friendly" id="HM3BLUE" port="9339">127.0.0.1</zone> 
-                <zone name="smart" id="HM3GREEN" port="9339">127.0.0.1</zone> 
-                <zone name="polite" id="HM3GREEN" port="9339">127.0.0.1</zone>
+                <zone name="happy" id="HM3" port="9339">216.255.66.34</zone> 
+                <zone name="funny" id="HM3RED" port="9339">216.255.66.15</zone> 
+                <zone name="strong" id="HM3BLUE" port="9339">216.255.66.34</zone> 
+                <zone name="friendly" id="HM3BLUE" port="9339">216.255.66.15</zone> 
+                <zone name="smart" id="HM3GREEN" port="9339">216.255.66.34</zone> 
+                <zone name="polite" id="HM3GREEN" port="9339">216.255.66.15</zone>
                 
     </zones> 
     <zones environment='STG'> 
@@ -70,7 +70,7 @@
                 <zone name="smart" id="HM3GREEN" port="9339">127.0.0.1</zone> 
                 <zone name="polite" id="HM3GREEN" port="9339">127.0.0.1</zone> 
     </zones>
-	<happymealURL environment='PRD'>http://localhost/en_US/</happymealURL>
+	<happymealURL environment='PRD'>http://www.happymeal.com/en_US/</happymealURL>
 	<happymealURL environment='STG'>http://www.staging.happymeal.com/en_US/</happymealURL>
 	<happymealURL environment='DEV'>http://www.development.happymeal.com/en_US/</happymealURL>
 	<happymealURL environment='CREATA'>http://dev.creatainteractive.com/US_73_WSG/</happymealURL>

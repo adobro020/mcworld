@@ -1,95 +1,186 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>McWorld</title>
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      background: #000;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>McWorld®</title>
-		<meta name="description" content="">
-		<meta name="keywords" content="">
-		<meta name="author" content="Creata">
+    #player {
+      width: 100vw;
+      height: 100vh;
+      min-width: 978px;
+      min-height: 770px;
+      background: #000;
+    }
 
-		<link href="/en_US/css/global.css" rel="stylesheet" type="text/css">
-		
-		<!-- Configuration -->		
-		<script type="text/javascript" src="/en_US/js/functions.js"></script>
-		<script type="text/javascript" src="/en_US/js/config.js"></script>
-		<script type="text/javascript" src="/en_US/js/global.js"></script>
-		<script type="text/javascript" src="/en_US/js/flash.js"></script>
-		<!-- SWF Helpers to avoid IE activation bug aka EOLAS -->
-		<script type="text/javascript" src="/en_US/js/swfobject.js"></script>
-	</head>
-	<body>
-		<noscript>
-			<div>
-				Please enable javascript on your browser.
-			</div>
-		</noscript>
-		<div id="mainContainer"><embed type="application/x-shockwave-flash" src="/en_US/swf3/PlayerClient.swf" style="undefined" id="HM3Client" name="HM3Client" bgcolor="#000000" quality="high" allowscriptaccess="always" allowfullscreen="true" wmode="transparent" menu="false" flashvars="configURL=/en_US/config/config.xml&amp;serverURL=http://localhost:80/&amp;serviceGatewayURL=http://localhost:80/virtualworld/RemoteService&amp;baseURL=http://localhost:80/en_US/&amp;mapsDIR=swf3/maps/&amp;npcsDIR=swf3/npcs/&amp;localeDIR=en_US/&amp;swf3DIR=swf3/&amp;env=CREATA" height="100%" width="100%"></div>
-		<script type="text/javascript">
-			// <![CDATA[
-				var fo = new SWFObject(MyConfig.files.main.url, MyConfig.files.main.id,
-				MyConfig.files.main.width, MyConfig.files.main.height,
-				MyConfig.files.main.version, MyConfig.files.main.color);
-				fo.useExpressInstall(MyConfig.files.expressInstall.url);
-				fo.addParam("allowScriptAccess", "always");
-				fo.addParam("allowFullScreen", "true");
-				fo.addVariable("configURL", MyConfig.files.config.url);
-				fo.addVariable("serverURL", MyConfig.serverURL);
-				fo.addVariable("serviceGatewayURL", MyConfig.serviceGatewayURL);
-				fo.addVariable("baseURL", MyConfig.baseURL);
-				fo.addVariable("mapsDIR", MyConfig.mapsDIR);
-				fo.addVariable("npcsDIR", MyConfig.npcsDIR);
-				fo.addVariable("localeDIR", MyConfig.localeDIR);
-				fo.addVariable("swf3DIR", MyConfig.swf3DIR);
-				fo.addVariable("env", MyConfig.env);
-				fo.addParam("wmode", "transparent");
-				//opaque mode causes issues w/ firefox on pc
-				fo.addParam("menu", "false");
-				
-				var search = window.location.search;
-				if(search)
-				{
-					var searchArray = new Array();
-					searchArray = (search.substr(3,search.length-3)).split("&");
-					fo.addVariable("startNPC", searchArray[0]);
-					fo.addVariable("room", searchArray[1]);
-				}
-				
-				
-				fo.write("mainContainer");
-				
-			  // ]]>
-		</script>
-		<script type="text/javascript">
-		if (deconcept.SWFObjectUtil.getPlayerVersion().rev == 0 && deconcept.SWFObjectUtil.getPlayerVersion().minor == 0) {
-			document.getElementById('defaultContent').style.display="block";
-		}
-		</script>
-<div id="overlay" style="background: #000; position:absolute; top:50px; left:50%; margin-left: -235px; width: 470px; height: 350px; z-index:1; display:none"></div>
+    ruffle-player {
+      width: 100%;
+      height: 100%;
+    }
 
-<!-- START OF SmartSource Data Collector TAG --> 
-<!-- Created: 2/22/2010 5:59:36 PM --> 
-	<script src="http://www1.mcdonalds.com/metrics/hmusvw/webtrends.js" type="text/javascript"></script> 
-	<!-- ----------------------------------------------------------------------------------- --> 
-	<!-- Warning: The two script blocks below must remain inline. Moving them to an external --> 
-	<!-- JavaScript include file can cause serious problems with cross-domain tracking. --> 
-	<!-- ----------------------------------------------------------------------------------- --> 
-	<script type="text/javascript"> 
-	//<![CDATA[ 
-	var _tag=new WebTrends();
-	_tag.dcsGetId(); 
-//]]>> 
-	</script> 
-	<script type="text/javascript">
-	//<![CDATA[ 
-	// Add custom parameters here. 
-	//_tag.DCSext.param_name=param_value; 
-	_tag.dcsCollect(); 
-	//]]>> 
-	</script> 
-	<!-- END OF SmartSource Data Collector TAG -->
+    #status {
+      position: fixed;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: #000;
+      color: #fff;
+      text-align: center;
+      z-index: 2;
+    }
 
+    #status[hidden] {
+      display: none;
+    }
 
-	
+    .panel {
+      max-width: 560px;
+      line-height: 1.45;
+    }
 
+    .title {
+      margin: 0 0 10px;
+      font-size: 22px;
+      font-weight: 700;
+    }
 
-</body></html>
+    .message {
+      margin: 0;
+      color: #d7d7d7;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div id="player"></div>
+  <div id="status">
+    <div class="panel">
+      <p class="title">Loading McWorld...</p>
+      <p class="message">Preparing the archived Flash client in a modern browser.</p>
+    </div>
+  </div>
+
+  <script>
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.RufflePlayer.config = {
+      autoplay: "on",
+      unmuteOverlay: "visible",
+      backgroundColor: "#000000",
+      allowScriptAccess: true,
+      allowFullscreen: true,
+      allowNetworking: "all",
+      compatibilityRules: true,
+      upgradeToHttps: false,
+      playerVersion: 10,
+      wmode: "transparent"
+    };
+
+    const statusEl = document.getElementById("status");
+    const statusTitle = statusEl.querySelector(".title");
+    const statusMessage = statusEl.querySelector(".message");
+    const ruffleSources = [
+      "https://unpkg.com/@ruffle-rs/ruffle",
+      "https://cdn.jsdelivr.net/npm/@ruffle-rs/ruffle",
+      "https://cdnjs.cloudflare.com/ajax/libs/ruffle-rs/0.2.0-nightly.2025.9.29/ruffle.js"
+    ];
+
+    function setStatus(title, message) {
+      statusEl.hidden = false;
+      statusTitle.textContent = title;
+      statusMessage.textContent = message;
+    }
+
+    function hideStatusSoon() {
+      window.setTimeout(() => {
+        statusEl.hidden = true;
+      }, 1200);
+    }
+
+    function loadScript(index) {
+      return new Promise((resolve, reject) => {
+        if (index >= ruffleSources.length) {
+          reject(new Error("Ruffle could not be loaded."));
+          return;
+        }
+
+        const script = document.createElement("script");
+        script.src = ruffleSources[index];
+        script.async = true;
+        script.onload = resolve;
+        script.onerror = () => loadScript(index + 1).then(resolve, reject);
+        document.head.appendChild(script);
+      });
+    }
+
+    function buildFlashVars() {
+      const rootURL = new URL("./", document.baseURI).href;
+      const localeURL = new URL("en_US/", document.baseURI).href;
+
+      return {
+        configURL: "en_US/config/config.xml",
+        serverURL: rootURL,
+        serviceGatewayURL: new URL("virtualworld/RemoteService", rootURL).href,
+        baseURL: localeURL,
+        mapsDIR: "swf3/maps/",
+        npcsDIR: "swf3/npcs/",
+        localeDIR: "en_US/",
+        swf3DIR: "swf3/",
+        env: "localhost"
+      };
+    }
+
+    function boot() {
+      if (location.protocol === "file:") {
+        setStatus(
+          "Open this through a local web server",
+          "Modern browsers block some local SWF, XML, and audio requests from file:// pages. The page is ready, but it works best from a local server."
+        );
+      }
+
+      const baseURL = new URL("en_US/", document.baseURI).href;
+      const ruffle = window.RufflePlayer.newest();
+      const player = ruffle.createPlayer();
+      const container = document.getElementById("player");
+
+      container.appendChild(player);
+      player.ruffle().load({
+        url: "en_US/swf3/PlayerClient.swf",
+        parameters: buildFlashVars(),
+        autoplay: "on",
+        unmuteOverlay: "visible",
+        backgroundColor: "#000000",
+        allowScriptAccess: true,
+        allowFullscreen: true,
+        allowNetworking: "all",
+        compatibilityRules: true,
+        upgradeToHttps: false,
+        playerVersion: 10,
+        wmode: "transparent",
+        urlRewriteRules: [
+          [/^https?:\/\/mcworld\.happymeal\.com(?::80)?\/en_US\//i, baseURL],
+          [/^https?:\/\/localhost(?::80)?\/en_US\//i, baseURL],
+          [/^\/en_US\//i, baseURL]
+        ]
+      }).then(hideStatusSoon).catch((error) => {
+        setStatus("Could not start McWorld", error.message);
+      });
+    }
+
+    loadScript(0).then(boot).catch((error) => {
+      setStatus("Could not load the Flash emulator", error.message);
+    });
+  </script>
+</body>
+</html>
