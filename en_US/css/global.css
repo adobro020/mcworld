@@ -1,0 +1,47 @@
+html,body{
+	height:100%;
+}
+body{
+	color:#FFFF00;
+	background-color:#000000;
+}
+body,table,td,img,form{
+	margin:0px;
+	padding:0px;
+	border:0px;
+}
+#mainContainer, #HM3Client{
+	width:100%;
+	height:100%;
+	position: relative;
+	
+	/* IE7/Mozilla/FF */
+	min-width:978px;
+	min-height:770px;
+	
+	/* IE6/Safari */
+	/*width:expression( Math.max(document.body.clientWidth,978) + "px" );*/
+	height:expression( Math.max(document.body.clientHeight,750) + "px" );
+}
+
+/*
+     FILE ARCHIVED ON 13:14:07 Jun 21, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 20:34:36 Jul 30, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 80.787
+  exclusion.robots: 0.087
+  exclusion.robots.policy: 0.079
+  cdx.remote: 0.061
+  esindex: 0.009
+  LoadShardBlock: 52.882 (3)
+  PetaboxLoader3.datanode: 72.279 (4)
+  CDXLines.iter: 17.242 (3)
+  load_resource: 54.864
+  PetaboxLoader3.resolve: 33.337
+*/

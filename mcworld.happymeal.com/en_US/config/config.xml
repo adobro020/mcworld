@@ -1,0 +1,659 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--config file for HM3 Avatar -->
+<!--http://www.happymeal.com-->
+<config>
+	 
+
+	<name>HM3</name>
+	<legal><![CDATA[<br/>At participating McDonald’s. While supplies last. Ask about our special toys for children under 3.<br/>© 2013 McDonald’s]]></legal>
+
+
+<!--TM & © 2010 Lucasfilm Ltd. All Rights Reserved. Used Under Authorization.-->
+
+
+	<!-- SocketServer settings -->
+	<socket>SF</socket> 
+
+	<welcome>
+		<!--selection id="1" type="map">Tree House</selection-->
+		<selection id="1" type="map">Tree House</selection>
+		<selection id="2" type="map">Petsylvania</selection>
+		<selection id="3" type="map">Uptown</selection>
+		<selection id="4" type="map">Game Dome</selection>
+		<selection id="5" type="map">Superopolis</selection>
+		<selection id="6" type="map">Starport</selection>
+		
+	</welcome>
+	
+	<!-- SmartFox settings -->
+	<port>9339</port>
+		<zones environment='PRD'> 
+                <zone name="happy" id="HM3" port="9339">216.255.66.34</zone> 
+                <zone name="funny" id="HM3RED" port="9339">216.255.66.15</zone> 
+                <zone name="strong" id="HM3BLUE" port="9339">216.255.66.34</zone> 
+                <zone name="friendly" id="HM3BLUE" port="9339">216.255.66.15</zone> 
+                <zone name="smart" id="HM3GREEN" port="9339">216.255.66.34</zone> 
+                <zone name="polite" id="HM3GREEN" port="9339">216.255.66.15</zone>
+                
+    </zones> 
+    <zones environment='STG'> 
+                <zone name="happy" id="HM3" port="9339">216.255.65.197</zone> 
+                <zone name="funny" id="HM3RED" port="9339">216.255.65.197</zone> 
+                <zone name="strong" id="HM3BLUE" port="9339">216.255.65.197</zone> 
+                <zone name="friendly" id="HM3BLUE" port="9339">216.255.65.197</zone> 
+                <zone name="smart" id="HM3GREEN" port="9339">216.255.65.197</zone> 
+                <zone name="polite" id="HM3GREEN" port="9339">216.255.65.197</zone> 
+                
+    </zones> 
+    <zones environment='DEV'> 
+                <zone name="happy" id="HM3" port="9339">216.255.65.103</zone> 
+                <zone name="funny" id="HM3RED" port="9339">216.255.65.103</zone> 
+                <zone name="strong" id="HM3BLUE" port="9339">216.255.65.103</zone> 
+                <zone name="friendly" id="HM3BLUE" port="9339">216.255.65.103</zone> 
+                <zone name="smart" id="HM3GREEN" port="9339">216.255.65.103</zone> 
+                <zone name="polite" id="HM3GREEN" port="9339">216.255.65.103</zone> 
+    </zones> 
+    <zones environment='CREATA'> 
+                <zone name="happy" id="HM3" port="9339">dev.creatainteractive.com</zone> 
+                <zone name="funny" id="HM3RED" port="9339">dev.creatainteractive.com</zone> 
+                <zone name="strong" id="HM3BLUE" port="9339">dev.creatainteractive.com</zone> 
+                <zone name="friendly" id="HM3BLUE" port="9339">dev.creatainteractive.com</zone> 
+                <zone name="smart" id="HM3GREEN" port="9339">dev.creatainteractive.com</zone> 
+                <zone name="polite" id="HM3GREEN" port="9339">dev.creatainteractive.com</zone> 
+    </zones>
+	
+	<zones environment='localhost'> 
+                <zone name="happy" id="HM3" port="9339">127.0.0.1</zone> 
+                <zone name="funny" id="HM3RED" port="9339">127.0.0.1</zone> 
+                <zone name="strong" id="HM3BLUE" port="9339">127.0.0.1</zone> 
+                <zone name="friendly" id="HM3BLUE" port="9339">127.0.0.1</zone> 
+                <zone name="smart" id="HM3GREEN" port="9339">127.0.0.1</zone> 
+                <zone name="polite" id="HM3GREEN" port="9339">127.0.0.1</zone> 
+    </zones>
+	<happymealURL environment='PRD'>http://www.happymeal.com/en_US/</happymealURL>
+	<happymealURL environment='STG'>http://www.staging.happymeal.com/en_US/</happymealURL>
+	<happymealURL environment='DEV'>http://www.development.happymeal.com/en_US/</happymealURL>
+	<happymealURL environment='CREATA'>http://dev.creatainteractive.com/US_73_WSG/</happymealURL>
+	<happymealURL environment='localhost'>http://localhost/en_US/</happymealURL>
+	
+	<debug>true</debug>
+	
+	<!-- Dead Reckoning settings -->
+	<collision>false</collision>
+	<realistic>true</realistic>
+	<smoothing>true</smoothing>
+	
+	<!-- Debuging -->
+	<emulation>false</emulation>
+	<latency>10</latency>
+	
+	<!-- Library Files -->
+	<libs>
+		<lib id="library">library.swf</lib>		
+		<lib id="footer">footer.swf</lib>
+		<lib id="fonts">fonts.swf</lib>
+		<lib id="mpage">libs/mpage.swf</lib>
+		<!--<lib id="pets">libs/pets.swf</lib>-->
+		<lib id="avatars">libs/avatars.swf</lib>
+		<!--<lib id="accessories">libs/accessories.swf</lib>
+		<lib id="avatardance">libs/avatardance.swf</lib>-->
+		<!--<lib id="furnitures">libs/furnitures.swf</lib>-->
+		<lib id="rebecca">libs/rebecca.swf</lib>
+		<lib id="multiplayer">libs/multiplayer.swf</lib>
+		<lib id="modals">libs/modals.swf</lib>
+	</libs>
+	
+	<!-- Map Locations -->
+	<maps>
+		<map id="Lobby">lobby.xml</map>
+		<map name="Game Dome" favored="true" id="Game Dome">gamedome.xml</map>
+		<map name="Treehouse Forest" favored="true" id="Tree House">treehouse.xml</map>
+		<map name="Treehouse Forest" favored="true" id="Tree House Room">treehouseroom.xml</map>
+		<map name="The White Castle" favored="true" id="White Castle">whitecastle.xml</map>
+		<map name="Runamok Park " favored="true" id="Runamok Park" library="naturepark/library.swf">runamokpark.xml</map>
+		<map name="Uptown" favored="true" id="Uptown" library="skytown/library.swf">uptown.xml</map>
+		<map name="Sunken Treasure Cove" favored="true" id="Sunken Treasure Cove" library="underwater/library.swf">sunkencove.xml</map>
+		<map name="Wacky-Ki Beach" favored="true" id="WackyKi Beach" library="beach/library.swf">beach.xml</map>
+		<map name="Space Place" favored="true" id="Starport" library="starport/library.swf">starport.xml</map>
+		<map name="Superopolis" favored="true" id="Superopolis">superopolis.xml</map>
+		<map name="EnchantedHollow" favored="true" id="Enchanted Hollow" library="hollow/library.swf">hollow.xml</map>
+		<map name="Mt. Lavapalooza" favored="true" id="Lavapalooza" library="lavapalooza/library.swf">lavapalooza.xml</map>
+		<map name="Petsylvania" favored="true" id="Petsylvania">petsylvania.xml</map>
+		<map name="Dinostralia" favored="true" id="Dinosaur" library="dinosaur/library.swf">dinosaur.xml</map>
+		<map name="Haunted Hideout" favored="true" id="Hauntedhouse">hauntedhouse.xml</map>
+		<map name="Dragon" favored="true" id="Dragon">dragon.xml</map>
+		<map name="McWorld World" favored="true" id="RollerCoaster">rollercoaster.xml</map>
+		<map name="Half-Pipe Park" favored="true" id="Skatepark">skatepark.xml</map>
+		<map name="Give Happy Grove" favored="true" id="Happygrove" library="happygrove/library.swf">happygrove.xml</map>
+		<map name="Pumpkin" id="Pumpkin">pumpkin.xml</map>
+
+		
+	</maps>
+
+	<!-- NPC Location IDs (library="library.swf") -->
+		<!-- name=""  indicate the display name in menu list -->
+	<npcs>
+		<npc category="npcs" name="Continental Drift" id="Continental Drift">continentaldrift.xml</npc>
+		<npc category="npcs" name="SpongebobNPC" id="SpongebobNPC" library="spongebobnpc/library.swf">spongebobnpc.xml</npc>
+		<npc category="npcs" name="LunchBox" id="LunchBox">lunchbox.xml</npc>		
+		<npc category="npcs" name="YummySounds" id="YummySounds" library="stagem/library.swf">yummysounds.xml</npc>
+		<npc category="npcs" name="StageM" id="StageM" library="stagem/library.swf">stagem.xml</npc>
+		<npc category="game" goal="2000" name="Pinguins" id="Pinguins">pinguins.xml</npc>	
+		<npc category="npcs" name="Castle Entrance" id="Castle Entrance">castleentrance.xml</npc>
+		<npc category="game" goal="2000" name="GhoulFish" id="GhoulFish">ghoulfish.xml</npc>	
+		<npc category="npcs" library="shoemaker/library.swf" type="spark" name="Design a Shoe" id="Shoe Maker">shoemaker.xml</npc>
+		<npc category="activity" goal="10000" type="spark" id="Rainbow Draw">rainbowdraw.xml</npc>
+		<npc category="npcs" id="RickShawChallenge">rickshawchallenge.xml</npc>
+		<npc category="npcs" id="Monster Maker" library="monstermaker/library.swf">monstermaker.xml</npc>
+		<npc category="game" goal="5000" type="spark" name="Sound Benders" id="Music Master">musicmaster.xml</npc>
+		<npc category="game" goal="5000" type="spark" name="Grandma's Basket" id="Red Riding Hood">redridinghood.xml</npc>
+		<npc category="game" goal="10000" type="spark" name="Give happy game" id="Give Happy">givehappy.xml</npc>	
+		<npc category="game" goal="10000" type="spark" name="Cannon Feeder" id="Cannon">cannon.xml</npc>	
+		<npc category="npcs" library="givingcard/library.swf" type="spark" name="Send Happy Card" id="Giving Card">givingcard.xml</npc>
+		<!--<npc category="npcs" library="kfpecard/library.swf" type="spark" name="KFP eCard" id="KFP eCard">kfpecard.xml</npc>-->
+		<npc category="game" goal="10000" type="spark" name="Hamster Toobster" id="Habitrail">habitrail.xml</npc>
+		<npc category="npcs" library="smurfquiz/game.swf" name="Smurf Quiz" id="smurfquiz">smurfquiz.xml</npc>
+		<npc category="npcs" library="icarlyquiz/game.swf" name="iCarly Quiz" id="icarlyquiz">icarlyquiz.xml</npc>
+		<npc category="game" goal="5000" type="spark" name="Swing Ding" id="Swing Ding">swingding.xml</npc>
+		<npc category="game" goal="5000" type="spark" name="Train a Pup" id="Train a Pup">dogtraining.xml</npc>
+		<npc category="game" goal="5000" type="spark" name="Defend McWorld" id="Jet Pilot">jetpilot.xml</npc>
+		<npc category="game" goal="10000" type="spark" name="Be Like Me" id="Be Like Me">belikeme.xml</npc>	
+		<npc category="game" goal="2000" type="spark" name="Magic Potion" id="Magic Potion">magicpotion.xml</npc>		
+		
+		<npc category="npcs" id="Joy In The Box" library="joyinthebox/library.swf">joyinthebox.xml</npc>
+		<npc category="game" goal="5000" name="Krayzee Bananas" id="Krayzee Bananas">krayzeebananas.xml</npc>		
+		<npc category="game" goal="5000" type="spark" name="Viking Catapult" id="Viking Catapult">vikingcatapult.xml</npc>
+		<npc category="npcs" goal="10000" id="Viking Activity">vikingactivity.xml</npc>
+		<npc category="game" goal="5000" type="smarts" name="Lava Jam Cave" id="Music Game">musicgame.xml</npc>
+		<npc category="game" goal="5000" type="strength" name="Ride O Saurus" id="Ride O Saurus">rideosaurus.xml</npc>
+		
+		<npc category="npcs" library="gamecavechooser/library.swf" id="Game Cave Chooser">gamecavechooser.xml</npc>
+		<npc category="npcs" library="avatarchooser/library.swf" id="Avatar Chooser">avatarchooser.xml</npc>
+		<npc category="npcs" library="transformation/library.swf" id="Transformation">transformation.xml</npc>
+		<npc category="game" goal="5000" type="smarts" name="What's the Difference" id="Whats The Difference">whatsthedifference.xml</npc>
+		<npc category="game" goal="5000" type="smarts" name="Jigsaw Jam" id="Jigsaw Jam">jigsawjam.xml</npc>
+		<npc category="game" goal="5000" type="spark" name="Kick It to Win" id="Kick It to Win">kickittowin.xml</npc>
+		<npc category="game" goal="5000" type="strength" name="You be the QB" id="You be the QB">footballgame.xml</npc>
+		<npc category="game" goal="5000" type="strength" name="Bumper Car Chaos" id="Bumper">bumper.xml</npc>
+		<npc category="game" goal="5000" type="strength" name="Half-Pipe Pup" id="Half-Pipe Pup">halfpipehero.xml</npc>
+		<npc category="game" goal="5000" type="strength" name="Robo jumper" id="Robo Pogo">robopogo.xml</npc>
+		<npc category="npcs" library="superherosuitup/library.swf" type="strength" name="Super Hero Suit Up" id="Superhero Suit up">superherosuitup.xml</npc>
+		<npc category="game" goal="2000" type="strength" name="Spaceway Raceway" id="Space Race">spaceway.xml</npc>
+		<npc category="game" goal="5000" type="strength" name="Pup and Over Race" id="Pup and Over Race">kittyhurdle.xml</npc>
+		<npc category="game" goal="5000" type="strength" name="Cosmic Javelin" id="Cosmic Javelin">kittyjavelin.xml</npc>
+		<npc category="game" goal="5000" type="strength" name="Tiki Toss" id="Tiki Toss">kittyshotput.xml</npc>
+		<npc category="game" goal="5000" type="strength" name="LivGirl Quiz" id="livgirlquiz">livgirlquiz.xml</npc>
+		<npc category="game" goal="5000" type="strength" name="Smurf Quiz" id="smurfquiz">smurfquiz.xml</npc>
+		
+		<npc category="game" goal="5000" type="spark" name="Down Hill" id="Down Hill">downhill.xml</npc>
+		<!--<npc category="game" goal="5000" type="smarts" id="Deigos River Race">deigosriverrace.xml</npc>
+		<npc category="game" goal="5000" type="smarts" id="Mannys Match">mannysmatch.xml</npc>
+		<npc category="game" goal="5000" type="strength" id="Scrats Acorn Search">scratsacornsearch.xml</npc>
+		<npc category="game" goal="5000" id="Monster VS Alien">mva.xml</npc>
+		<npc category="game" goal="5000" id="Spiderman Rescue">spiderman.xml</npc>-->
+		
+		<npc category="npcs" library="sportsarena/library.swf" favored="true" name="Kids Colosseum" id="Sports Arena">sportsarena.xml</npc>
+		<npc category="npcs" library="entercode/library.swf" id="Entercode">entercode.xml</npc>
+		<!-- <npc category="npcs" library="championship/library.swf" id="ChampionShip">championship.xml</npc>-->
+		<!-- <npc category="npcs" type="spark" library="sidpopupdinostralia/library.swf" id="SidPopupDinostralia">sidpopupdinostralia.xml</npc>-->
+		<npc category="npcs" library="petcenter/library.swf" id="Pet Center">petcenter.xml</npc>
+		<npc category="npcs" library="petscool/library.swf" id="Pets Cool">petscool.xml</npc>
+		<npc category="npcs" id="World News">worldnews.xml</npc>
+		<npc category="npcs" id="World Map" library="worldmap/library.swf">worldmap.xml</npc>
+		<npc category="npcs" id="MPage">worldmap.xml</npc>
+		<npc category="npcs" library="racetrackbox/library.swf" favored="true" name="Rocket Raceway" id="Race Track Box">racetrackbox.xml</npc>
+		<npc category="npcs" id="Pirate Ship" library="pirateship/library.swf">pirateship.xml</npc>
+		<npc category="npcs" id="Badge Dome">badgedome.xml</npc>
+		<npc category="npcs" id="Rainbow Room" library="rainbowroom/library.swf">rainbowroom.xml</npc>
+		<npc category="npcs" id="Games Arcade" library="gamesarcade/library.swf">gamesarcade.xml</npc>
+		<npc category="npcs" id="Uptown Mall">skymart.xml</npc>
+		<npc category="npcs" id="Board Silly Hut" library="boardsillyhut/library.swf">boardsillyhut.xml</npc>
+		<npc category="npcs" id="Shush" favored="true" name="S.H.U.S.H" library="shush/library.swf">shush.xml</npc>
+		<npc category="npcs" library="herohq/library.swf" id="Hero HQ">herohq.xml</npc>
+		<npc category="npcs" id="Fairy Cottage" library="fairycottage/library.swf">fairycottage.xml</npc>
+		<npc category="npcs" id="Post Office">postoffice.xml</npc>
+		<npc category="npcs" library="castlechic/library.swf" favored="true" name="The Pink Castle" id="Fashion Castle">castlechic.xml</npc>
+		<npc category="npcs" type="spark" id="Move It">moveit.xml</npc>
+		<npc category="npcs" name="Olympic Games Challenge" id="OGC" library="ogc/library.swf">ogc.xml</npc>
+		
+		<npc category="game" goal="10000" type="strength" name="Surf Rookie" id="Surf Rookie">surf.xml</npc>
+		<npc category="game" goal="5000" type="spark" name="Tunnel Racer" id="Tunnel Racer">tunnelracer.xml</npc>
+		
+		<npc category="game" goal="10000" type="spark" name="Skate Smartz" id="Skate Smartz">skatesmartz.xml</npc>
+		<npc category="game" goal="10000" type="smarts" name ="Symbol Shuffle" id="Symbol Shuffle">symbolshuffle.xml</npc>
+		<npc category="game" goal="25000" type="spark" name="Start Your Engines" id="Start Your Engines">startyourengines.xml</npc>
+		<!-- npc category="game" type="smarts" id="Sky Scope">skyscope.xml</npc -->
+		<!-- npc category="game" goal="15000" type="smarts" id="Deep Sea Pinball">deepseapinball.xml</npc -->
+		<npc category="game" goal="9000" type="smarts" name="Code Breaker" id="Code Breaker">codebreaker.xml</npc>
+		<npc category="game" goal="600" type="smarts" name ="World's Hardest Game" id="Megamind">megamind.xml</npc>
+		<npc category="game" goal="5000" name="Bongo Kongo" id="Bongo Kongo">bongokongo.xml</npc>
+		<npc category="game" goal="5000" type="strength" name="Spy Adventure" id="Spy Adventure">spyadventure.xml</npc>
+		<npc category="game" goal="5000" type="smarts" name="Checkers" id="Checkers">checkers.xml</npc>
+		<npc category="game" goal="5000" type="smarts" name="Dog-A-Ma-Jig" id="Dog-A-Ma-Jig">dogquiz.xml</npc>
+		<npc category="game" goal="5000" type="smarts" name="Operation HUSH" id="Spy Game">spygame.xml</npc>
+		<npc category="game" goal="5000" type="smarts" name="Skate Shop" id="Skateboard Activity">skateboardactivity.xml</npc>
+		<npc category="game" goal="5000" type="smarts" name="Young Justice Quiz" id="youngjusticequiz">youngjusticequiz.xml</npc>
+		<npc category="game" goal="10000" type="smarts" name="Hamster Tooster" id="Habitrail">habitrail.xml</npc>
+		<npc category="game" goal="5000" library="checkers/library.swf" name="Checkers M" id="Checkers M">checkersm.xml</npc>
+		<npc category="game" goal="10000" name="River Rafting" id="River Rafting">riverrafting.xml</npc>		
+		<npc category="game" goal="10000" name="Race Track" id="Race Track">racetrack.xml</npc>
+		<npc category="game" goal="10000" name="Race Track Build Car" id="Race Track Build Car">racetrackbuildcar.xml</npc>
+		<npc category="game" goal="10000" name="Race Build Truck" id="Race Build Truck">racetrackbuildtruck.xml</npc>
+		<npc category="game" goal="10000" type="smarts" name="What Can I Be" id="WhatCanIBe">whatcanibe.xml</npc>
+		<npc category="game" goal="10000" name="stuntrageous" id="Stuntrageous" library="stuntrageous/library.swf">stuntrageous.xml</npc>
+		<npc category="game" goal="10000" name="SpaceRescue" id="SpaceRescue" library="spacerescue/library.swf">spacerescue.xml</npc>
+		
+		<npc category="activity" goal="10000" id="Lost Treasure">losttreasure.xml</npc>
+		
+		<npc category="game" goal="5000" name="Sunken Treasure" id="Sunken Treasure">sunkentreasure.xml</npc>
+		<npc category="game" goal="5000" name="Squinkies" id="Squinkies">squinkies.xml</npc>
+		<npc category="npcs" goal="10000" id="Dinosaur Activity">dinosauractivity.xml</npc>
+		<npc category="npcs" library="hauntedhouseload/library.swf" id="HauntedhouseLoad">hauntedhouseload.xml</npc>
+		<npc category="npcs" name="Videos" id="Videos">videos.xml</npc>
+		<npc category="game" name="SpySearch" id="SpySearch" library="spysearch/library.swf">spysearch.xml</npc>
+		<npc category="game" name="Prehistoric Search" id="PrehistoricSearch" library="prehistoricsearch/library.swf">prehistoricsearch.xml</npc>
+		<npc category="game" goal="5000" name="Seashell Fling" id="Seashell Fling">seashellfling.xml</npc>
+		
+	</npcs>
+	
+	<!-- Quests Related -->
+	<quests>
+		<!-- Normal Database Saving Quest	-->	
+		<!--<quest id="49" classname="MvAQuest">
+			<name> Free McWorld!</name>
+			<description><![CDATA[Kids of McWorld! Join our force of kids and monsters to defeat Gallaxhar! Help B.O.B. complete his spy mission on Gallaxhar’s ship!]]>		</description>
+		</quest> 
+		 <quest id="47" classname="SpidermanRescueQuest">
+			<name>Spectacular Spider-Man Rescue Quest</name>
+			<description><![CDATA[Put on your Spidey Suit and capture radioactive spiders to help Spider-Man restore his super powers!]]></description>
+		</quest> -->
+		<!-- <quest id="42" classname="LetTheGameBeginQuest">
+			<name>LET THE GAMES BEGIN!</name>
+			<description><![CDATA[Play all five games in the McWorld Championship. Try to get the highest score to impress Heroic Man and he will give you a special reward!]]></description>
+		</quest>-->
+		<quest id="38" classname="SavePetQuest" activate="Pet Center">
+			<name>SAVE A PET, ADOPT A PET</name>
+			<description><![CDATA[Rescue 8 puppies around McWorld. Return to Zooey and she'll let you adopt a pet of your own!]]></description>
+		</quest>
+		<quest id="29" classname="PixelinaQuest">
+			<name>PIXELINA'S WISH</name>
+			<description>When someone somewhere long ago made the First Wish, the Enchanted Hollow came to life.  Now any wish that's wished adds to the magic of the Hollow! Pixelina, the Wisherwink of the Hollow, needs your help in granting her 3 wishes.</description>
+		</quest>
+		<quest id="30" classname="SuperopolisQuest">
+			<name>SUPEROPOLIS NEEDS YOU!</name>
+			<description>The fair city of Superopolis needs more super heroes! Heroic Man challenges you with completing 3 tasks. Have you got what it takes to be a true super hero? </description>
+		</quest>
+		<quest id="15" classname="MissionImpossibleQuest" activate="Shush">
+			<name>IMPOSSIBLE MISSION?</name>
+			<description>The Voice needs you to complete a super top secret mission that will require puzzle solving, undercover, reconnaissance, and good old fashioned investigative leg work to get to the bottom of a mysterious note that was sent to S.H.U.S.H. It's up to you to figure out what the note could lead to in the end!</description>
+		</quest>
+		<quest id="1" classname="HelpYourBudQuest">
+			<name>HELP YOUR BUD</name>
+			<description>Help your treehouse grow big and strong by finding the Greengrow Punch somewhere.</description>
+		</quest>
+		<quest id="8" classname="DrSquashQuest" activate="Rainbow Room">
+			<name>DR SQUASH AND THE PRISMOTRON</name>
+			<description>Help Dr Squash collect 10 Kaleidoblooms to power his new invention, the Prisomtron!</description>
+		</quest>
+	<!--	<quest id="13" classname="TheUltimateRideQuest">
+			<name>THE ULTIMATE RIDE</name>
+			<description>Shreddy wants to throw a beach party to celebrate his latest project - the ultimate surfboard. But he needs your help! Can you help him collect the items he needs to finish his ultimate board? You may even get to be the first to try it out!</description>
+		</quest>-->
+		<!-- Default Non Saving Quest -->			
+		<quest id="-1" classname="DefaultPetCenterQuest">
+			<name>Default Pet Center Quest</name>
+			<description>Default Pet Center Quest</description>
+		</quest>
+		<quest id="-1" classname="DefaultFairyCottageQuest">
+			<name>Default Fairy Cottage Quest</name>
+			<description>Default Dialogues for Fairy Cottage</description>
+		</quest>
+		<quest id="-1" classname="DefaultHeroHQQuest">
+			<name>Default Hero HQ Quest</name>
+			<description>Default Dialogues for Hero HQ</description>
+		</quest>		
+		<quest id="-1" classname="DefaultTreeHouseQuest">
+			<name>Default Tree House Quest</name>
+			<description>Default Dialogues for Treehouse</description>
+		</quest>
+		<quest id="-1" classname="DefaultPirateShipQuest">
+			<name>Default Pirate Ship Quest</name>
+			<description>Default Dialogues for Pirate Ship</description>
+		</quest>
+		<quest id="-1" classname="DefaultRainbowRoomQuest">
+			<name>Default Rainbow Room Quest</name>
+			<description>Default Dialogues for Rainbow Room</description>
+		</quest>
+		<quest id="-1" classname="DefaultSillyHutQuest">
+			<name>Default Silly Hut Quest</name>
+			<description>Default Dialogues for Silly Board Hut</description>
+		</quest>
+		<quest id="-1" classname="DefaultSunkenCoveQuest">
+			<name>Default Sunken Treasure Cove Quest</name>
+			<description>Default Dialogues for Sunken Treasure Cove</description>
+		</quest>
+		<quest id="-1" classname="DefaultBeachQuest">
+			<name>Default Wacki Beach Quest</name>
+			<description>Default Dialogues for Wacki Beach</description>
+		</quest>		
+		<!-- quest id="-1" classname="DefaultLavapaloozaQuest">
+			<name>Default Mt. Lavapalooza Quest</name>
+			<description>Default Dialogues for Mt. Lavapalooza</description>
+		</quest -->	
+	</quests>
+	
+	<help>	
+		<topic name="Frequently Asked Questions">
+			<desc>The following are the Frequently Asked Questions (FAQ).</desc>
+			<item name="How much does it cost to join?"><![CDATA[Access to the Happy Meal virtual world is completely FREE! Just register to access all the features on the site or click on Guest Login to check it out (limited features available).]]></item>
+			<item name="How do I use my Happy Meal code?"><![CDATA[Each Happy Meal comes with a code. Happy Meal codes can be found on various items such as White and Chocolate Milk Jugs, and Apple Dippers. Just look for the red Happy Meal box icon. Keep that code, go to Happymeal.com or the virtual world site, and enter it in the code section. Every code does something new and will unlock special surprises!]]></item>
+			<item name="Registration/Login"><![CDATA[When you first come to the site, you will be asked to choose a server and then a zone. This allows a lot of people to come on the site at the same time. It doesn't really matter which ones you pick. 
+After these windows, you'll be asked to create a screen name and password. Do not share this information with anyone but your parent or guardian! Also try to remember this information or keep it safely recorded because you will need it to login to the site every time you come back.]]></item>
+			<item name="Using the Interface"><![CDATA[The navigation bar is your one stop shop for getting where you want to go and getting what you need.
+<font color="#003399" size="13">Click on...</font>
+<font color="#003399" size="13">mPal</font> to trigger a panel listing the mStuff you have for your mPal.
+<font color="#003399" size="13">Treehouse</font> to trigger a panel listing the mStuff you have for your Treehouse.
+<font color="#003399" size="13">mChat</font> to trigger all safe chat options you have for chatting with others.
+<font color="#003399" size="13">mBuddies</font> to trigger a panel listing all users who are present in an area you are in. To add an mBuddy, rollover the user’s name in the list and click “Add mBuddy.” If you want to remove an mBuddy, click on “Go To” to find that particular mBuddy anywhere in the world.
+<font color="#003399" size="13">COLLAPSE</font> will close your avatar viewing window.
+<font color="#003399" size="13">EXPAND</font> will open up your avatar viewing window.
+<font color="#003399" size="13">Click on...</font>]]></item>
+			<item name="Stage M"><![CDATA[<img id="iconbuddy" src="images/nav-icon-music.png" width="61" height="61"/>to Stage M.
+			]]></item>
+			<item name="Game Dome"><![CDATA[<img id="iconchat" src="images/nav-icon-gamedome.png" width="61" height="61"/>to play games.
+			]]></item>
+			<item name="Treehouse"><![CDATA[<img id="iconhome" src="images/nav-icon-home.png" width="61" height="61"/> to go directly to your Treehouse.
+			]]></item>
+			<item name="World Map"><![CDATA[<img id="iconmap" src="images/nav-icon-map.png" width="61" height="61"/> to go directly to the World Map.
+			]]></item>
+			<item name="Quest Journal"><![CDATA[<img id="iconquest" src="images/nav-icon-quest.png" width="61" height="61"/> to open up your Quest Journal.
+			]]></item>
+			<item name="World News"><![CDATA[<img id="iconnews" src="images/nav-icon-news.png" width="61" height="61"/> to get the latest news and updates.
+			]]></item>
+			<item name="Vote"><![CDATA[<img id="iconvote" src="images/nav-icon-vote.png" width="61" height="61"/> to vote in the latest poll.
+			]]></item>
+			<item name="Help"><![CDATA[<img id="iconhelp" src="images/nav-icon-help.png" width="61" height="61"/> to get help.
+			
+			]]></item>			
+			<item name="From pups to parrots, it's fun to adopt a virtual pet in McWorld®!"><![CDATA[There are three ways to adopt a pet in McWorld®! <br/>1.Go on a quest to help Zooey at the Pet Adoption Center in Petsylvania<br/>2.Enter a code from a special Happy Meal®<br/>3.Play games in Petsylvania]]></item>			
+			<item name="Get a virtual pet by completing the Pup Rescue quest!"><![CDATA[You can get one pet by going on a quest! Go visit Zooey at the Pet Adoption Center in Petsylvania. She'll give you all your choices on how to adopt a pet. Click on the one that says, "I want to go on the Pup Rescue quest!" Find the 8 pups that are lost in McWorld and then go back to Zooey in Petsylvania. She'll help you pick your new pet! You have lots of cool choices! <br/><br/>Hint: If you ever need to check your progress on any quest, check your Journal]]></item>
+			<item name="Quest Journal"><![CDATA[<img id="iconquest" src="images/nav-icon-quest.png" width="61" height="61"/> to open up your Quest Journal.
+			]]></item>
+			
+			<item name="Get a virtual pet when you enter a McWorld® Code from your Happy Meal®!"><![CDATA[Your Happy Meal® comes with an awesome code you can use to get special pets! If you have a code, visit Zooey in Petsylvania. When she asks you how you want to adopt your pet, click on "I have a code." You will then see a screen that tells you to enter your code. The code is special and no one else has it. Take your time and make sure you enter all your letters and numbers correctly. Then, you’ll either get your special new pet or you will get to choose your new pet.]]></item>
+				
+			<item name="Get a virtual pet by playing games in Petsylvania!"><![CDATA[There are two awesome games in Petsylvania - Dog-A-Ma-Jig and Train-A-Pup. Every time you play Dog-A-Ma-Jig or Train-A-Pup, you get to adopt another pet! Just play the game to earn a pet certificate (your pet certificate will appear in your Gear). Then go back to Zooey and claim your new pet.]]></item>
+			
+			<item name="Walking your pet:"><![CDATA[Once you get your virtual pet, it will be in your Gear. Click on your Gear button]]></item>
+			<item name=""><![CDATA[<img id="iconquest" src="images/icon-mstuff.png" width="157" height="36"/>
+			]]></item>
+			<item name=""><![CDATA[and click the up or down arrows until you see your pet. Click on your pet and then move your computer mouse so you can click on "Walk your pet." Then your new pet will be with you everywhere you go in McWorld®! <br/><br/>If you want to stop walking your pet:<br/>1.  Find that pet in your Gear and click on "Send Home." <br/> or <br/>2.  Go to your Gear and click on another pet you want to walk. That's it! ]]></item>
+			
+			
+			<item name="Keeping your avatar happy!"><![CDATA[Every activity or game you do in the world awards points towards one, two, or three of your meters. The goal is have all these meters at full for as long as you can while you're playing. That means your avatar is in tip top shape!]]></item>
+			<item name="SMARTS meter"><![CDATA[<img id="smartsmeter" src="images/meter-mind.png" width="214" height="28"/> Boost this meter by doing activities that exercise your brain!
+			]]></item>
+			<item name="STRENGTH meter"><![CDATA[<img id="strengthmeter" src="images/meter-body.png" width="214" height="28"/> Boost this meter by doing activities that get your heart pumping!
+			]]></item>
+			<item name="SPARK meter"><![CDATA[<img id="sparkmeter" src="images/meter-spirit.png" width="214" height="28"/> Boost this meter by doing the things you love to do and just having fun!
+			]]></item>
+			<item name="How do I earn points for buying things?">Doing activities, completing quests, playing games and doing other things in the world can help you earn points that will let you purchase things in the world.</item>
+			<item name="What can I do on the site?"><![CDATA[<font color="#003399" size="13">Playing Games</font>
+Go to the Game Dome to play the latest games. Simply click on one of the monitors to launch a game.
+<font color="#003399" size="13">Talking to Characters</font>
+Click on a resident in a location like for example, Skylie Nimbus at the Uptown Market, and she'll talk to you! Just read the text in the window that shows up and click on the links in the window to trigger more conversation or launch quests or activities. <i>Coming soon</i>!
+<font color="#003399" size="13">Downloading Activities</font>
+You can have fun in the real world too! Talk to a resident and download an activity. You'll need Adobe Acrobat Reader? to open up the file.
+<font color="#003399" size="13">Chatting Safely</font>
+Click on the CHAT button in your navigation bar for all the different messages you can send to others. Scroll over and click on the one you want.
+<font color="#003399" size="13">Buying and Selling Items</font>
+Go to a store like the Uptown Market in Uptown. There are two buttons you can click: 'Buy an Item' and 'Sell an Item'. Simply click on the one you want and it will activate the mode that lets you buy or sell an item. Then choose whether you want to buy or sell something for your Avatar or your Home. All the items that are available for each mode will appear. Click on an item to select it. Then click on 'Buy it' or 'Sell it' and a window will pop up to confirm your decision. 
+<font color="#003399" size="13">Customizing your Avatar</font>
+When you register, you can create your own personal avatar. Pick an avatar by clicking the arrow keys to scroll through all the different ones. Then do the same thing for each individual piece of clothing for your avatar. Click 'Register' to start playing!
+<font color="#003399" size="13">Customizing your Treehouse</font>
+You can decorate your Treehouse with all kinds of cool stuff. Go to your Treehouse. Then click on 'Home Stuff' in your navigation bar. You'll see a list of all the items you have available to put in your Treehouse. Click on an item you want to place and click 'Place'. Then move and point to where in the Treehouse you want the item to appear. If you want to remove that item, go back to that item in the list in your navigation bar and click 'Remove'.
+<font color="#003399" size="13">Completing Quests</font>
+Quests are like adventures and interactive stories that you and your avatar can participate in. You can get quests from various residents by talking to them and accepting the quest. You can keep track of your quests in your Quest Journal. Click on the book icon on your navigation bar to go directly to your Quest Journal.
+<font color="#003399" size="13">Finding Easter Eggs</font>
+Easter eggs are secrets that are hidden throughout the world. They can be virtually anything! So keep on the lookout!
+<font color="#003399" size="13">Where can I get the latest news?</font>
+Keep up to date on what's happening at the Y.N.N. network. Chet Chatterman is always on hand with things you want to know! Click on the Y.N.N. button on your navigation bar.]]></item>
+		</topic>
+	</help>
+	<news>
+		<topic name="">
+			<desc><![CDATA[Check out the Game Dome.<br/>There are lots of fun games<br/>to play there.<br/>Have you made the McWorld<br/>Leaderboard?]]></desc>
+		</topic>
+		<topic name="">
+			<desc><![CDATA[The Uptown Mall is open for<br/>business.<br/>Use your mPoints to get amazing<br/>mStuff for your mPal and<br/>your treehouse.]]></desc>
+		</topic>
+		<topic name="">
+			<desc><![CDATA[Stage M is a great place to visit<br/>if you like cool music videos<br/>and great games.]]></desc>
+		</topic>
+	</news>
+	
+	<games>
+		<game id="130">Seashell Fling</game>
+		<game id="3">Half-Pipe Pup</game>
+		<game id="64">Bumper</game>
+		<game id="45">Cosmic Javelin</game>
+		<game id="44">Pup and Over Race</game>	
+		<game id="46">Tiki Toss</game>				
+		<game id="41">Train a Pup</game>
+		<game id="40">Bongo Kongo</game>			
+		<game id="39">Dog-A-Ma-Jig</game>			
+		<game id="36">Robo Pogo</game>
+		<game id="35">Sunken Treasure</game>
+		<game id="26">Space Race</game>
+		<game id="2">Tunnel Racer</game>
+		<game id="4">Skate Smartz</game>
+		<game id="6">Start Your Engines</game>
+		<game id="7">Symbol Shuffle</game>
+		<game id="9">Lost Treasure</game>
+		<game id="10">Rainbow Draw</game>
+		<game id="11">Surf Rookie</game>
+		<game id="17">Code Breaker</game>
+		<game id="18">Spy Adventure</game>
+		<game id="27">Magic Potion</game>
+		<game id="28">Be Like Me</game>
+		<game id="31">Race Track</game>
+		<game id="32">River Rafting</game>		
+	</games>	
+	
+	<about>
+		<topic name="About the Site">
+			<desc><![CDATA[The Happy Meal has gone digital!
+Welcome to McDonald's new, free virtual world where You rule!
+Unlike other virtual worlds, our world is made of, by and for kids! You'll have a real say in what the world will become by voting in our Kids Vote. Vote for the name of the virtual world, what new places you can visit, new games, activities, events and more. Then see them actually come to life in the virtual world!
+Also a code can be found on various Happy Meal items such as the Happy Meal box or bag, White and Chocolate Milk Jugs and Apple Dippers. The codes unlock all kinds of cool stuff like exclusive accessories for your avatar or treehouse, interactive pets, or even events where your favorite movie, TV, or comic book characters may appear and play with you!
+McDonald's has always been dedicated to kids and family. And now we want to provide a safe experience for you online where you can have fun.
+And, it's all free! So what are you waiting for?
+Here, you rule for real, so get out there and have a blast!]]></desc>
+		</topic>
+		<topic name="Tips For Maximum Fun!">
+			<desc><![CDATA[Everyone wants to have fun, right? Of course! It's easy, as long as you follow these simple rules while playing. Keep in mind that anyone who doesn't follow these rules may be banned from the site.]]></desc>
+			<item name="#1 - Follow Your Family Rules - what they say goes!">Make sure your parent or guardian knows you are online. Follow their rules for how you use the Internet.</item>
+			<item name="#2 - Respect Others">Nobody likes to be made fun of, pushed around, or teased, and being online is no different. Respect others and everyone can have a good time!</item>
+			<item name="#3 - Cheaters Never Win">The use of third-party programs on the site is not allowed.</item>
+			<item name="#4 - Privacy">Don't share your screen name or password with anyone but your parent or guardian.</item>
+		</topic>
+	</about>
+	
+	<!-- Chat Messages -->
+	<messages>		
+		<group name="Hi!">
+			<message>Boo</message>
+			<message>Arrrf!</message>
+			<message>Hello!</message>
+			<message>Yo!</message>
+			<message>Hey!</message>
+			<message>Hola!</message>
+			<message>Whassup?</message>
+			<message>Howdy!</message>
+			<message>Hey there!</message>
+
+		</group>
+		<group name="Friends">
+			<message>Happy Halloween</message>
+			<message>Nice pet!</message>
+			<message>I like to move it!</message>
+			<message>Wow!</message>
+			<message>Let's go wild!</message>
+			<message>Awesome moves!</message>
+			<message>I've got super powers!</message>
+			<message>Cool cape!</message>
+			<message>Beautiful wings!</message>
+			<message>Wanna hang?</message>
+			<message>Let's play a game!</message>
+			<message>Wanna be friends?</message>
+			<message>Let's chill!</message>
+			<message>You're Awesome!</message>
+			<message>You rock!</message>
+			<message>That is sooo cute! </message>
+			<message>Let's go race at the Race Track!</message>
+		</group>
+		<group name="Questions">
+			<group name="Where did you get that?">				
+				<message>What will you do with your minute?</message>				
+				<message>Where did you get that hat?</message>
+				<message>Where did you get those glasses?</message>
+				<message>Where did you get that cape?</message>
+				<message>Where did you get that dress?</message>
+				<message>Where did you get those pants?</message>
+				<message>Where did you get those shoes?</message>
+				<message>Where did you get that outfit?</message>
+				<message>Where do you go to design an outfit?</message>
+				<message>Did you see the new Race Track! </message>
+				<message>Did you vote to name the new Race Track?</message>
+			</group>
+			<message>Have you played the new pet games?</message>
+			<!--<message>Have you seen any stray dogs that need rescuing?</message>-->
+			<message>Wanna dance?</message>
+			<message>What's your favorite sport?</message>
+			<message>What's your favorite animal?</message>
+			<message>Where to?</message>
+			<message>What's up?</message>
+			<message>What do you want to do?</message>
+			<message>How's your tree house?</message>		
+			<message>How do you feel?</message>
+			<message>How about you?</message>
+		</group>
+		<group name="Answers">
+			<group name="Places">
+				<message>Where's the dance party?</message>
+				<message>Mt. Lavapalooza</message>
+				<message>Game Dome</message>
+				<message>Tree House</message>
+				<message>Runamok Park</message>
+				<message>Uptown</message>
+				<message>Sunken Treasure Cove</message>
+				<message>Wacky-Ki Beach</message>
+				<message>S.H.U.S.H.</message>
+				<message>Space Place</message>
+				<message>Superopolis</message>
+				<message>Enchanted Hollow</message>
+				<message>The Pink Castle</message>		
+			</group>
+			<group name="My favorite sport is...">			
+				<message>Soccer</message>
+				<message>Baseball</message>
+				<message>Dancing</message>
+				<message>Football</message>
+				<message>Biking</message>
+				<message>Skateboarding</message>
+				<message>Surfing</message>
+				<message>Running </message>
+				<message>Basketball</message>
+				<message>Gymnastics</message>
+				<message>Tennis</message>
+				<message>Just having fun!</message>
+			</group>
+			<group name="My favorite animal is...">
+				<message>Dog</message>
+				<message>Cat</message>
+				<message>Horse</message>
+				<message>Lizard</message>
+				<message>Monkey</message>
+				<message>Bird</message>
+				<message>Shark</message>
+				<message>Dragon </message>
+				<message>Unicorn</message>
+				<message>Hamster</message>
+			</group>
+			<group name="Good-bye">
+				<message>See ya!</message>
+				<message>Bye!</message>
+				<message>Catch ya later!</message>
+				<message>C ya!</message>
+				<message>Later</message>
+				<message>So long!</message>
+				<message>Gotta go!</message>
+				<message>BRB</message>
+			</group>
+			<group name="Thank you">
+				<message>TY</message>
+				<message>Thanks!</message>
+			</group>
+			<group name="OK">
+				<message>Of course!</message>
+				<message>You got it!</message>
+				<message>Sure</message>
+				<message>Alright!</message>
+				<message>Yea!</message>
+			</group>
+			<message>You're welcome!</message>
+			<message>Nothing much</message>
+			<message>Cool!</message>
+			<message>I love it</message>
+			<message>Oh yeah!</message>
+			<message>This is the best!</message>
+			<message>LOL!</message>
+			<message>That's amazing!</message>
+			<message>Great!</message>
+			<message>I am on an important quest.</message>
+			<message>Quest</message>
+			<message>Groove it!</message>
+			<message>Dance it</message>
+			<message>Rock it!</message>
+			<message>Share it!</message>
+		</group>
+		<group name="Mood">
+			<message>I love my pet!</message>
+			<message>I feel...Silly!</message>
+			<message>I feel...Happy!</message>
+			<message>I feel...Peaceful!</message>
+			<message>I feel...Smart!</message>
+			<message>I feel...Weird!</message>
+			<message>I feel...Sleepy!</message>
+			<message>I feel...Kiddy!</message>
+			<message>I feel...like a brainiac!</message>
+			<message>I feel...like a super hero!</message>
+			<message>I feel...like a celebrity!</message>
+			<message>I feel...like climbing a mountain!</message>
+			<message>I feel...like playing games!</message>
+			<message>I feel...like chatting!</message>
+		</group>
+		<group name="Ha!">
+			<message>Great game!</message>
+			<message>Nice!</message>
+			<message>Sweet</message>
+			<message>Huh?</message>
+			<message>Yeee haaaaaa!</message>
+			<message>Gotcha!</message>
+			<message>????????????</message>
+		</group>
+		<group name="Yep">
+			<message>You betcha!</message>
+			<message>Affirmative.</message>
+			<message>Go for it!</message>
+			<message>Okeedokee...</message>
+			<message>Yes!</message>
+			<message>Absolutely!</message>
+		</group>
+		<group name="Nope">
+			<message>No can do...</message>
+			<message>Maybe later...</message>
+		</group>
+		<message>Ok</message>
+	</messages>
+</config>
