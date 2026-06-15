@@ -1,0 +1,12 @@
+{
+  "name": "mcworld-html-server",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static McWorld launcher with first-pass server stubs for Ruffle socket and remoting calls.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

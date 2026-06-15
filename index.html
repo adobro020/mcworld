@@ -81,6 +81,11 @@
       allowScriptAccess: true,
       allowFullscreen: true,
       allowNetworking: "all",
+      socketProxy: [{
+        host: "127.0.0.1",
+        port: 9339,
+        proxyUrl: socketProxyURL()
+      }],
       compatibilityRules: true,
       upgradeToHttps: false,
       playerVersion: 10,
@@ -106,6 +111,11 @@
       window.setTimeout(() => {
         statusEl.hidden = true;
       }, 1200);
+    }
+
+    function socketProxyURL() {
+      const wsProtocol = location.protocol === "https:" ? "wss:" : "ws:";
+      return new URL("socket", `${wsProtocol}//${location.host}${location.pathname}`).href;
     }
 
     function loadScript(index) {
@@ -164,6 +174,11 @@
         allowScriptAccess: true,
         allowFullscreen: true,
         allowNetworking: "all",
+        socketProxy: [{
+          host: "127.0.0.1",
+          port: 9339,
+          proxyUrl: socketProxyURL()
+        }],
         compatibilityRules: true,
         upgradeToHttps: false,
         playerVersion: 10,
